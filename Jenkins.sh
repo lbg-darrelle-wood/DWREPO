@@ -1,5 +1,5 @@
 #!/bin/bash
 # A simple script
-echo -e "Please enter your name: "
+echo -e "Who Loves Orange Soda: "
 read name
-echo "Nice to meet you $name"
+echo "Is it true $name?"
