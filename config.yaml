@@ -1,9 +1,9 @@
 on:
   push:
      branches:
-       - master
+       - main
 
-name: ⏫ Copy content to REBEL
+name: ⏫ Copy content to DWREPO3
 
 jobs:
   copy-file:
@@ -14,28 +14,28 @@ jobs:
 
     # Copy the 'post' folder
     - name: Push posts
-      uses: dmnemec/copy_file_to_another_repo_action@main
+      uses: demo/copy_file_to_another_repo_action@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        API_TOKEN_GITHUB: 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
       with:
-        source_file: 'content/post/' # Folder to copy
-        destination_repo: 'RealityBending/RealityBending.github.io' # Target repo
-        destination_folder: 'content/' # Folder where to copy it
-        user_email: 'dom.makowski@gmail.com'
-        user_name: 'DominiqueMakowski'
-        commit_message: "AUTO: Copying posts from Dom's to REBEL's website"
+        source_file: 'demo/' # Folder to copy
+        destination_repo: 'https://github.com/lbg-darrelle-wood/DWREPO3' # Target repo
+        destination_folder: 'demo/' # Folder where to copy it
+        user_email: 'darrelle.wood@e.lloydsbanking.com'
+        user_name: 'lbg-darrelle-wood'
+        commit_message: "AUTO: Copying posts from DWREPO to DWREPO3"
         git_server: 'github.com'
 
     # Copy the 'publication' folder
     - name: Push publications
-      uses: dmnemec/copy_file_to_another_repo_action@main
+      uses: demo/copy_file_to_another_repo_action@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        API_TOKEN_GITHUB: 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
       with:
-        source_file: 'content/publication/' # Folder to copy
-        destination_repo: 'RealityBending/RealityBending.github.io' # Target repo
-        destination_folder: 'content/' # Folder where to copy it
-        user_email: 'dom.makowski@gmail.com'
-        user_name: 'DominiqueMakowski'
-        commit_message: "AUTO: Copying publications from Dom's to REBEL's website"
+        source_file: 'demo/' # Folder to copy
+        destination_repo: 'https://github.com/lbg-darrelle-wood/DWREPO3' # Target repo
+        destination_folder: 'demo/' # Folder where to copy it
+        user_email: 'darrelle.wood@e.lloydsbanking.com'
+        user_name: 'lbg-darrelle-wood'
+        commit_message: "AUTO: Copying publications from DWREPO to DWREPO3"
         git_server: 'github.com'
