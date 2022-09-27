@@ -1,10 +1,9 @@
-git clone https://github.com/lbg-darrelle-wood/DWREPO.git
-git clone https://github.com/lbg-darrelle-wood/DWREPO3.git
-
-cd -r DWREPO/test/* DWREPO3/test
-
-cd DWREPO3
-
-git add .
-git commit - m “AUTOMSG - Adding changes from main repo”
-git push
+on:
+  create: 
+  - git clone https://github.com/lbg-darrelle-wood/DWREPO.git
+  - git clone https://github.com/lbg-darrelle-wood/DWREPO3.git
+  - cd -r DWREPO/test/* DWREPO3/test
+  - cd DWREPO3
+  - git add .
+  - git commit - m “AUTOMSG - Adding changes from main repo”
+  - git push
