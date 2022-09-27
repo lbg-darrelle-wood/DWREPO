@@ -14,13 +14,13 @@ jobs:
 
     # Copy the 'post' folder
     - name: Push posts
-      uses: demo/copy_file_to_another_repo_action@main
+      uses: DWREPO/demo/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: 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
       with:
         source_file: 'demo/' # Folder to copy
         destination_repo: 'https://github.com/lbg-darrelle-wood/DWREPO3' # Target repo
-        destination_folder: 'demo/' # Folder where to copy it
+        destination_folder: 'DWREPO3/demo/' # Folder where to copy it
         user_email: 'darrelle.wood@e.lloydsbanking.com'
         user_name: 'lbg-darrelle-wood'
         commit_message: "AUTO: Copying posts from DWREPO to DWREPO3"
