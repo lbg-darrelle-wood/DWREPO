@@ -6,5 +6,5 @@ cd -r DWREPO/test/* DWREPO3/test
 cd DWREPO3
 
 git add .
-git commit - m “AUTO: Adding changes from main repo”
+git commit - m “AUTOMSG - Adding changes from main repo”
 git push
