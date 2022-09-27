@@ -1,41 +1,10 @@
-on:
-  push:
-     branches:
-       - main
+git clone https://github.com/lbg-darrelle-wood/DWREPO.git
+git clone https://github.com/lbg-darrelle-wood/DWREPO3.git
 
-name: ⏫ Copy content to DWREPO3
+cd -r DWREPO/test/* DWREPO3/test
 
-jobs:
-  copy-file:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+cd DWREPO3
 
-    # Copy the 'post' folder
-    - name: Push posts
-      uses: DWREPO/demo/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: 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
-      with:
-        source_file: 'demo/' # Folder to copy
-        destination_repo: 'https://github.com/lbg-darrelle-wood/DWREPO3' # Target repo
-        destination_folder: 'DWREPO3/demo/' # Folder where to copy it
-        user_email: 'darrelle.wood@e.lloydsbanking.com'
-        user_name: 'lbg-darrelle-wood'
-        commit_message: "AUTO: Copying posts from DWREPO to DWREPO3"
-        git_server: 'github.com'
-
-    # Copy the 'publication' folder
-    - name: Push publications
-      uses: demo/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: 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
-      with:
-        source_file: 'demo/' # Folder to copy
-        destination_repo: 'https://github.com/lbg-darrelle-wood/DWREPO3' # Target repo
-        destination_folder: 'demo/' # Folder where to copy it
-        user_email: 'darrelle.wood@e.lloydsbanking.com'
-        user_name: 'lbg-darrelle-wood'
-        commit_message: "AUTO: Copying publications from DWREPO to DWREPO3"
-        git_server: 'github.com'
+git add .
+git commit - m “AUTO: Adding changes from main repo”
+git push
