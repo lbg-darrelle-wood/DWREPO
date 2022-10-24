@@ -28,8 +28,8 @@ jobs:
        # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          git clone git@github.com:lbg-darrelle-wood/DWREPO.git
-          git clone git@github.com:lbg-darrelle-wood/DWREPO3.git
+          gh repo clone lbg-darrelle-wood/DWREPO
+          gh repo clone lbg-darrelle-wood/DWREPO3
           
           cp -r DWREPO/test/* DWREPO3/test
           cd DWREPO3
