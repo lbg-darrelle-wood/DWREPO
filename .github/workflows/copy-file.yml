@@ -29,13 +29,13 @@ jobs:
       - name: Run a multi-line script
         run: |
         env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           gh repo clone lbg-darrelle-wood/DWREPO
           gh repo clone lbg-darrelle-wood/DWREPO3
           
           cp -r DWREPO/test/* DWREPO3/test
           cd DWREPO3
           git add .
-          git commit -m "AUTO: Adding changes from Main Repo"
+          git commit -m "AUTO:Adding changes from Main Repo"
           git push
         
