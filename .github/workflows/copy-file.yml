@@ -2,6 +2,12 @@
 
 name: CI
 
+# GitHub CLI api
+# https://cli.github.com/manual/gh_api
+
+run-name: application/vnd.github+json" \
+  /orgs/ORG/actions/secrets/DARRELLE
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
